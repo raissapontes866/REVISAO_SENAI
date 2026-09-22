@@ -1,0 +1,392 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+    padding: 45px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #2563eb;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    padding: 40px 0;
+}
+
+.card {
+    background: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.card h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #334155;
+}
+
+
+/* =========================
+   FÓRMULAS
+========================= */
+
+.formula {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+
+    padding: 20px;
+    margin: 15px 0;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    text-align: center;
+    color: #1d4ed8;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   EXEMPLOS
+========================= */
+
+.example {
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    padding: 20px;
+    margin-top: 15px;
+
+    border-radius: 10px;
+}
+
+.example p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
+ul {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   ÁREA INTERATIVA
+========================= */
+
+.interactive {
+    margin-top: 30px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    border: 2px solid #e2e8f0;
+}
+
+.interactive h3 {
+    margin-top: 0;
+    color: #7c3aed;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 11px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    width: 100%;
+
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 18px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GRID DE COORDENADAS
+========================= */
+
+.inputs-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+/* =========================
+   PONTOS DO BARICENTRO
+========================= */
+
+.point {
+    background: white;
+
+    padding: 15px;
+
+    margin: 12px 0;
+
+    border-radius: 10px;
+
+    border: 1px solid #e2e8f0;
+}
+
+.point h4 {
+    margin-bottom: 8px;
+
+    color: #475569;
+}
+
+.point input {
+    width: 48%;
+}
+
+
+/* =========================
+   RESULTADOS
+========================= */
+
+#resultadoCircunferencia,
+#resultadoDistancia,
+#resultadoBaricentro {
+    margin-top: 18px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   EXERCÍCIOS
+========================= */
+
+.question {
+    background: #f8fafc;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #7c3aed;
+}
+
+.question h3 {
+    margin-top: 0;
+    color: #7c3aed;
+}
+
+.answer {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    background: #0f172a;
+
+    color: white;
+
+    padding: 30px;
+
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .inputs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .inputs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .point input {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
