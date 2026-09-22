@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matemática - Revisão para a Prova</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>📚 Revisão de Matemática</h1>
+            <p>Circunferência • Distância entre dois pontos • Baricentro</p>
+
+            <nav>
+                <a href="#circunferencia">Circunferência</a>
+                <a href="#distancia">Distância</a>
+                <a href="#baricentro">Baricentro</a>
+                <a href="#exercicios">Exercícios</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- CIRCUNFERÊNCIA -->
+        <section id="circunferencia" class="card">
+            <h2>⭕ 1. Circunferência</h2>
+
+            <p>
+                A circunferência é uma linha fechada formada por todos os pontos
+                que estão à mesma distância de um ponto central chamado de centro.
+            </p>
+
+            <h3>Fórmula do comprimento</h3>
+
+            <div class="formula">
+                C = 2πr
+            </div>
+
+            <ul>
+                <li><strong>C</strong> = comprimento da circunferência</li>
+                <li><strong>π</strong> ≈ 3,14</li>
+                <li><strong>r</strong> = raio</li>
+            </ul>
+
+            <h3>Exemplo</h3>
+
+            <div class="example">
+                <p>Se o raio de uma circunferência é 5 cm:</p>
+
+                <p>
+                    C = 2 · π · 5
+                </p>
+
+                <p>
+                    C ≈ 2 · 3,14 · 5
+                </p>
+
+                <strong>C ≈ 31,4 cm</strong>
+            </div>
+
+            <div class="interactive">
+                <h3>🧮 Calcule o comprimento</h3>
+
+                <label for="raio">Digite o raio:</label>
+
+                <input
+                    type="number"
+                    id="raio"
+                    placeholder="Ex: 5"
+                    min="0"
+                    step="0.01"
+                >
+
+                <button onclick="calcularCircunferencia()">
+                    Calcular
+                </button>
+
+                <p id="resultadoCircunferencia"></p>
+            </div>
+        </section>
+
+
+        <!-- DISTÂNCIA ENTRE DOIS PONTOS -->
+        <section id="distancia" class="card">
+            <h2>📍 2. Distância entre dois pontos</h2>
+
+            <p>
+                Para descobrir a distância entre dois pontos no plano cartesiano,
+                usamos o Teorema de Pitágoras.
+            </p>
+
+            <h3>Fórmula</h3>
+
+            <div class="formula">
+                d = √[(x₂ - x₁)² + (y₂ - y₁)²]
+            </div>
+
+            <h3>Exemplo</h3>
+
+            <div class="example">
+                <p>Considere os pontos:</p>
+
+                <p>
+                    A(2, 3) e B(6, 6)
+                </p>
+
+                <p>
+                    d = √[(6 - 2)² + (6 - 3)²]
+                </p>
+
+                <p>
+                    d = √[4² + 3²]
+                </p>
+
+                <p>
+                    d = √[16 + 9]
+                </p>
+
+                <strong>d = 5</strong>
+            </div>
+
+            <div class="interactive">
+                <h3>🧮 Calcule a distância</h3>
+
+                <div class="inputs-grid">
+
+                    <div>
+                        <label for="x1">x₁</label>
+                        <input type="number" id="x1">
+                    </div>
+
+                    <div>
+                        <label for="y1">y₁</label>
+                        <input type="number" id="y1">
+                    </div>
+
+                    <div>
+                        <label for="x2">x₂</label>
+                        <input type="number" id="x2">
+                    </div>
+
+                    <div>
+                        <label for="y2">y₂</label>
+                        <input type="number" id="y2">
+                    </div>
+
+                </div>
+
+                <button onclick="calcularDistancia()">
+                    Calcular distância
+                </button>
+
+                <p id="resultadoDistancia"></p>
+            </div>
+        </section>
+
+
+        <!-- BARICENTRO -->
+        <section id="baricentro" class="card">
+            <h2>🔺 3. Baricentro</h2>
+
+            <p>
+                O baricentro é o ponto de encontro das três medianas de um
+                triângulo.
+            </p>
+
+            <h3>Fórmula</h3>
+
+            <div class="formula">
+                G = ((x₁ + x₂ + x₃) / 3,
+                (y₁ + y₂ + y₃) / 3)
+            </div>
+
+            <h3>Exemplo</h3>
+
+            <div class="example">
+                <p>Considere os pontos:</p>
+
+                <p>
+                    A(1, 2), B(4, 5) e C(7, 2)
+                </p>
+
+                <p>
+                    xG = (1 + 4 + 7) / 3 = 4
+                </p>
+
+                <p>
+                    yG = (2 + 5 + 2) / 3 = 3
+                </p>
+
+                <strong>G = (4, 3)</strong>
+            </div>
+
+            <div class="interactive">
+                <h3>🧮 Calcule o baricentro</h3>
+
+                <div class="point">
+                    <h4>Ponto A</h4>
+
+                    <input
+                        type="number"
+                        id="ax"
+                        placeholder="x₁"
+                    >
+
+                    <input
+                        type="number"
+                        id="ay"
+                        placeholder="y₁"
+                    >
+                </div>
+
+                <div class="point">
+                    <h4>Ponto B</h4>
+
+                    <input
+                        type="number"
+                        id="bx"
+                        placeholder="x₂"
+                    >
+
+                    <input
+                        type="number"
+                        id="by"
+                        placeholder="y₂"
+                    >
+                </div>
+
+                <div class="point">
+                    <h4>Ponto C</h4>
+
+                    <input
+                        type="number"
+                        id="cx"
+                        placeholder="x₃"
+                    >
+
+                    <input
+                        type="number"
+                        id="cy"
+                        placeholder="y₃"
+                    >
+                </div>
+
+                <button onclick="calcularBaricentro()">
+                    Calcular baricentro
+                </button>
+
+                <p id="resultadoBaricentro"></p>
+            </div>
+        </section>
+
+
+        <!-- EXERCÍCIOS -->
+        <section id="exercicios" class="card">
+            <h2>📝 4. Exercícios para praticar</h2>
+
+            <div class="question">
+                <h3>Questão 1</h3>
+
+                <p>
+                    Uma circunferência possui raio igual a 10 cm.
+                    Considerando π = 3,14, qual é aproximadamente
+                    o seu comprimento?
+                </p>
+
+                <button onclick="mostrarResposta(1)">
+                    Mostrar resposta
+                </button>
+
+                <p id="resposta1" class="answer">
+                    Resposta: 62,8 cm.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>Questão 2</h3>
+
+                <p>
+                    Qual é a distância entre os pontos
+                    A(1, 2) e B(4, 6)?
+                </p>
+
+                <button onclick="mostrarResposta(2)">
+                    Mostrar resposta
+                </button>
+
+                <p id="resposta2" class="answer">
+                    Resposta: 5 unidades.
+                </p>
+            </div>
+
+
+            <div class="question">
+                <h3>Questão 3</h3>
+
+                <p>
+                    Determine o baricentro do triângulo formado pelos pontos
+                    A(0, 0), B(6, 0) e C(3, 6).
+                </p>
+
+                <button onclick="mostrarResposta(3)">
+                    Mostrar resposta
+                </button>
+
+                <p id="resposta3" class="answer">
+                    Resposta: G(3, 2).
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            📚 Site de revisão de Matemática
+        </p>
+
+        <p>
+            Desenvolvido para estudar para a prova.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
